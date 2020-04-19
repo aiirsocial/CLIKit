@@ -13,14 +13,14 @@ public func readInt(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void
         
         if repeatOnFailure {
             
-                while true {
-                    if let input = readLine() {
-                        if let int: Int = Int(input) {
-                            return int
-                        }
+            while true {
+                if let input = readLine() {
+                    if let int: Int = Int(input) {
+                        return int
                     }
-                    executeOnFailure()
                 }
+                executeOnFailure()
+            }
             
         } else {
             
