@@ -15,9 +15,9 @@ public func readString(repeatOnFailure: Bool? = false, executeOnFailure: () -> V
             
             while true {
                 if let input = readLine() {
-                    if let string: String = String(input) {
-                        return string
-                    }
+                    let string: String = input
+                    return string
+                } else {
                     executeOnFailure()
                 }
             }
@@ -25,9 +25,9 @@ public func readString(repeatOnFailure: Bool? = false, executeOnFailure: () -> V
         } else {
             
             if let input = readLine() {
-                if let string: String = String(input) {
-                    return string
-                }
+                let string: String = input
+                return string
+            } else {
                 executeOnFailure()
             }
             
@@ -143,32 +143,31 @@ public func readBool(repeatOnFailure: Bool? = false, executeOnFailure: () -> Voi
             
             while true {
                 if let input = readLine() {
-                    if let string: String = String(input.lowercased()) {
-                        if string.contains("y") || string.contains("t") {
-                            return true
-                        } else if string.contains("n") || string.contains("f") {
-                            return false
-                        } else {
-                            return nil
-                        }
+                    let string: String = input.lowercased()
+                    
+                    if string.contains("y") || string.contains("t") {
+                        return true
+                    } else if string.contains("n") || string.contains("f") {
+                        return false
+                    } else {
+                        executeOnFailure()
                     }
-                    executeOnFailure()
                 }
             }
             
         } else {
             
             if let input = readLine() {
-                if let string: String = String(input.lowercased()) {
-                    if string.contains("y") || string.contains("t") {
-                        return true
-                    } else if string.contains("n") || string.contains("f") {
-                        return false
-                    } else {
-                        return nil
-                    }
+                let string: String = input.lowercased()
+                
+                if string.contains("y") || string.contains("t") {
+                    return true
+                } else if string.contains("n") || string.contains("f") {
+                    return false
+                } else {
+                    executeOnFailure()
+                    return nil
                 }
-                executeOnFailure()
             }
             
         }
