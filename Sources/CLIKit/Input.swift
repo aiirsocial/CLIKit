@@ -23,12 +23,12 @@ public func readInt(repeatOnFailure: Bool? = false, executeOnFailure: Void? = ni
             
         } else {
             
-            if let onFaliure = executeOnFailure {
+            if let executeOnFailure = executeOnFailure {
                 if let input = readLine() {
                     if let int: Int = Int(input) {
                         return int
                     } else {
-                        onFaliure
+                        executeOnFailure
                     }
                 }
             } else {
