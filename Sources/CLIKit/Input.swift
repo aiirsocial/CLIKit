@@ -70,3 +70,111 @@ public func readInt(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void
     return nil
     
 }
+
+public func readFloat(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void) -> Float? {
+    
+    if let repeatOnFailure = repeatOnFailure {
+        
+        if repeatOnFailure {
+            
+            while true {
+                if let input = readLine() {
+                    if let float: Float = Float(input) {
+                        return float
+                    }
+                    executeOnFailure()
+                }
+            }
+            
+        } else {
+            
+            if let input = readLine() {
+                if let float: Float = Float(input) {
+                    return float
+                }
+                executeOnFailure()
+            }
+            
+        }
+        
+    }
+    
+    return nil
+    
+}
+
+public func readDouble(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void) -> Double? {
+    
+    if let repeatOnFailure = repeatOnFailure {
+        
+        if repeatOnFailure {
+            
+            while true {
+                if let input = readLine() {
+                    if let double: Double = Double(input) {
+                        return double
+                    }
+                    executeOnFailure()
+                }
+            }
+            
+        } else {
+            
+            if let input = readLine() {
+                if let double: Double = Double(input) {
+                    return double
+                }
+                executeOnFailure()
+            }
+            
+        }
+        
+    }
+    
+    return nil
+    
+}
+
+public func readBool(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void) -> Bool? {
+    
+    if let repeatOnFailure = repeatOnFailure {
+        
+        if repeatOnFailure {
+            
+            while true {
+                if let input = readLine() {
+                    if let string: String = String(input.lowercased()) {
+                        if string.contains("y") || string.contains("t") {
+                            return true
+                        } else if string.contains("n") || string.contains("f") {
+                            return false
+                        } else {
+                            return nil
+                        }
+                    }
+                    executeOnFailure()
+                }
+            }
+            
+        } else {
+            
+            if let input = readLine() {
+                if let string: String = String(input.lowercased()) {
+                    if string.contains("y") || string.contains("t") {
+                        return true
+                    } else if string.contains("n") || string.contains("f") {
+                        return false
+                    } else {
+                        return nil
+                    }
+                }
+                executeOnFailure()
+            }
+            
+        }
+        
+    }
+    
+    return nil
+    
+}
