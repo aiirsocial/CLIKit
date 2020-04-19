@@ -7,36 +7,28 @@
 
 import Foundation
 
-public func readInt(repeatOnFailure: Bool? = false, executeOnFailure: Void? = nil) -> Int? {
+public func readInt(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void) -> Int? {
     
     if let repeatOnFailure = repeatOnFailure {
         
         if repeatOnFailure {
             
-            while true {
-                if let input = readLine() {
-                    if let int: Int = Int(input) {
-                        return int
+                while true {
+                    if let input = readLine() {
+                        if let int: Int = Int(input) {
+                            return int
+                        }
                     }
+                    executeOnFailure()
                 }
-            }
             
         } else {
             
-            if let executeOnFailure = executeOnFailure {
-                if let input = readLine() {
-                    if let int: Int = Int(input) {
-                        return int
-                    } else {
-                        executeOnFailure
-                    }
+            if let input = readLine() {
+                if let int: Int = Int(input) {
+                    return int
                 }
-            } else {
-                if let input = readLine() {
-                    if let int: Int = Int(input) {
-                        return int
-                    }
-                }
+                executeOnFailure()
             }
             
         }
