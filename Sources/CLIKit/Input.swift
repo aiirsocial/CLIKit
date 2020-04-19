@@ -29,6 +29,7 @@ public func readString(repeatOnFailure: Bool? = false, executeOnFailure: () -> V
                 return string
             } else {
                 executeOnFailure()
+                return nil
             }
             
         }
@@ -61,6 +62,7 @@ public func readInt(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void
                     return int
                 }
                 executeOnFailure()
+                return nil
             }
             
         }
@@ -93,6 +95,7 @@ public func readFloat(repeatOnFailure: Bool? = false, executeOnFailure: () -> Vo
                     return float
                 }
                 executeOnFailure()
+                return nil
             }
             
         }
@@ -115,6 +118,7 @@ public func readDouble(repeatOnFailure: Bool? = false, executeOnFailure: () -> V
                         return double
                     }
                     executeOnFailure()
+                    return nil
                 }
             }
             
@@ -125,6 +129,7 @@ public func readDouble(repeatOnFailure: Bool? = false, executeOnFailure: () -> V
                     return double
                 }
                 executeOnFailure()
+                return nil
             }
             
         }
