@@ -4,7 +4,7 @@
 
 ### Introduction
 
-Use the ``readString()`` function to get ``String`` input from the user via the keyboard.
+Use the ``readString()`` function to get a ``String`` input from the user via the keyboard.
 
 The ``readString()`` function will always an ``optional String`` in case reading the input fails.
 
@@ -46,7 +46,7 @@ let input: String? = readString(repeatOnFailure: true, executeOnFailure: {
 import CLIKit
 
 let input: String? = readString {
-  writeString("Invalid Input Entered!".red())
+  writeString("Invalid Input!".red())
 }
 ```
 
@@ -63,7 +63,7 @@ let input: String? = readString(repeatOnFailure: false) {
 
 ### Introduction
 
-Use the ``readInt()`` function to get ``Int`` input from the user via the keyboard.
+Use the ``readInt()`` function to get an ``Int`` input from the user via the keyboard.
 
 The ``readInt()`` function will always an ``optional Int`` in case reading the input fails.
 
@@ -105,7 +105,7 @@ let input: Int? = readInt(repeatOnFailure: true, executeOnFailure: {
 import CLIKit
 
 let input: Int? = readInt {
-  writeString("Invalid Input Entered!".red())
+  writeString("Invalid Input!".red())
 }
 ```
 
@@ -115,5 +115,64 @@ import CLIKit
 
 let input: Int? = readInt(repeatOnFailure: false) {
   writeString("Invalid Input!".red())
+}
+```
+
+## Float Input
+
+### Introduction
+
+Use the ``readFloat()`` function to get a ``Float`` input from the user via the keyboard.
+
+The ``readFloat()`` function will always an ``optional Float`` in case reading the input fails.
+
+### Parameters
+
+Name | Type | Description | Default
+-- | -- | -- | --
+``repeatOnFailure`` | ``Bool`` | If ``true``, CLIKit will continue to scan for valid input if invald input has been entered. | ``false``
+``executeOnFailure`` | ``Void`` or as a Closure | If the default is not overwritten, CLIKit will not execute any user defined code if invald input has been entered. | ``{}``
+
+### Example Usage
+
+**Standard**
+
+```swift
+import CLIKit
+
+let input: Float? = readFloat()
+```
+
+**Parameters**
+
+```swift
+import CLIKit
+
+let input: Float? = readFloat(repeatOnFailure: true)
+```
+```swift
+import CLIKit
+
+let input: Float? = readFloat(repeatOnFailure: true, executeOnFailure: {
+    print("Invalid Input!".red())
+})
+```
+
+**Closure**
+
+```swift
+import CLIKit
+
+let input: Float? = readFloat {
+    writeString("Invalid Input!".red())
+}
+```
+
+**Parameters and Closure**
+```swift
+import CLIKit
+
+let input: Float? = readFloat(repeatOnFailure: false) {
+    writeString("Invalid Input!".red())
 }
 ```
