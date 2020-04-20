@@ -1,4 +1,4 @@
-# IO Documentation
+# Input Documentation
 
 ## String Input
 
