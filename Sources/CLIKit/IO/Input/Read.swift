@@ -1,5 +1,5 @@
 //
-//  Input.swift
+//  Read.swift
 //  
 //
 //  Created by Nathan General on 19/4/20.
@@ -118,7 +118,6 @@ public func readDouble(repeatOnFailure: Bool? = false, executeOnFailure: () -> V
                         return double
                     }
                     executeOnFailure()
-                    return nil
                 }
             }
             
