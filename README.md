@@ -1,2 +1,2 @@
 # CLIKit
-Library for Easily Creating Command Line Programs in Swift
+Swift Package for Creating Command Line Programs
