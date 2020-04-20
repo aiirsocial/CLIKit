@@ -8,7 +8,7 @@ Use the ``readString()`` function to get a ``String`` input from the user via th
 
 The ``readString()`` function will always an ``optional String`` in case reading the input fails.
 
-All Unicode characters for valid when using ``readString()``. ``readString()`` should only fail if an invalid character (one that is not valid when using ``readLine()``) is inputted.
+All ``Strings`` are valid input when using ``readString()``. ``readString()`` should only fail if an invalid character (one that is not valid when using ``readLine()``) is inputted.
 
 ### Parameters
 
@@ -69,6 +69,8 @@ Use the ``readInt()`` function to get an ``Int`` input from the user via the key
 
 The ``readInt()`` function will always an ``optional Int`` in case reading the input fails.
 
+Only inputs type ``Int`` are valid input when using ``readInt()``. ``readInt()`` should only fail in the event a ``String`` is inputted. CLIKIt is unable to to extract a yupr ``Int`` from a ``String``.
+
 ### Parameters
 
 Name | Type | Description | Default
@@ -128,6 +130,8 @@ Use the ``readFloat()`` function to get a ``Float`` input from the user via the 
 
 The ``readFloat()`` function will always an ``optional Float`` in case reading the input fails.
 
+Only inputs type ``Float`` or ``Int`` are valid input when using ``readFloat()``. ``readFloat()`` should only fail in the event a ``String`` is inputted. CLIKIt is unable to to extract a type ``Float`` from a ``Strings``.
+
 ### Parameters
 
 Name | Type | Description | Default
@@ -186,6 +190,8 @@ let input: Float? = readFloat(repeatOnFailure: false) {
 Use the ``readDouble()`` function to get a ``Double`` input from the user via the keyboard.
 
 The ``readDouble()`` function will always an ``optional Double`` in case reading the input fails.
+
+Only inputs type ``Double``, ``Float`` and ``Int`` are valid input when using ``readDouble()``. ``readDouble()`` should only fail in the event a ``String`` is inputted. CLIKIt is unable to to extract a type ``Double`` from an input type ``String``.
 
 ### Parameters
 
