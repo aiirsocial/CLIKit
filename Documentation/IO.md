@@ -8,6 +8,8 @@ Use the ``readString()`` function to get a ``String`` input from the user via th
 
 The ``readString()`` function will always an ``optional String`` in case reading the input fails.
 
+All Unicode characters for valid when using ``readString()``. ``readString()`` should only fail if an invalid character (one that is not valid when using ``readLine()``) is inputted.
+
 ### Parameters
 
 Name | Type | Description | Default
