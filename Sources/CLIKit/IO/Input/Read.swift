@@ -7,7 +7,7 @@
 
 import Foundation
 
-public func readString(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void) -> String? {
+public func readString(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void = {}) -> String? {
     
     if let repeatOnFailure = repeatOnFailure {
         
@@ -40,7 +40,7 @@ public func readString(repeatOnFailure: Bool? = false, executeOnFailure: () -> V
     
 }
 
-public func readInt(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void) -> Int? {
+public func readInt(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void = {}) -> Int? {
     
     if let repeatOnFailure = repeatOnFailure {
         
@@ -73,7 +73,7 @@ public func readInt(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void
     
 }
 
-public func readFloat(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void) -> Float? {
+public func readFloat(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void = {}) -> Float? {
     
     if let repeatOnFailure = repeatOnFailure {
         
@@ -106,7 +106,7 @@ public func readFloat(repeatOnFailure: Bool? = false, executeOnFailure: () -> Vo
     
 }
 
-public func readDouble(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void) -> Double? {
+public func readDouble(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void = {}) -> Double? {
     
     if let repeatOnFailure = repeatOnFailure {
         
@@ -139,7 +139,7 @@ public func readDouble(repeatOnFailure: Bool? = false, executeOnFailure: () -> V
     
 }
 
-public func readBool(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void) -> Bool? {
+public func readBool(repeatOnFailure: Bool? = false, executeOnFailure: () -> Void = {}) -> Bool? {
     
     if let repeatOnFailure = repeatOnFailure {
         
