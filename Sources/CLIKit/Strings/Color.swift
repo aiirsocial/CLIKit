@@ -7,16 +7,6 @@
 
 import Foundation
 
-public enum Color {
-    
-    case red
-    case green
-    case yellow
-    case blue
-    case magenta
-    
-}
-
 extension String {
     
     public func color(_ color: Color) -> String {
