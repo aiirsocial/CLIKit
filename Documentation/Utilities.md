@@ -1,10 +1,10 @@
 # Utilities Documentation
 
-## Color
+## Colors
 
 ### Introduction
 
-``Color`` is an ``enum`` of CLIKit colors.
+``Color`` is an ``enum`` of CLIKit ``String`` colors.
 
 ### Cases
 
@@ -19,3 +19,25 @@ Name | Color
 ### Example Use Cases
 
 - String Colors (Colored Output)
+
+## Styles
+
+### Introduction
+
+``Style`` is an ``enum`` of CLIKit ``String`` styles.
+
+### Cases
+
+Name | Style
+-- | --
+``.dim`` | Dim Color (Transparancy)
+``.italic`` | Italicize
+``.underline`` | Underline
+``.blink`` | Flash Repeatedly
+``.highlight`` | Highlight (Often Called "Reversed")
+``.hidden`` | Do Not Display
+``.strikethrough`` | Strike Through
+
+### Example Use Cases
+
+- String Styles (Styled Output)
