@@ -1,5 +1,5 @@
 //
-//  Color.swift
+//  Colors.swift
 //  
 //
 //  Created by Nathan General on 21/4/20.
