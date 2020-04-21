@@ -215,5 +215,5 @@ struct CLIKit {
         limitations under the License.
     """
     let repository: String = "https://github.com/aiirsocial/CLIKit"
-    let originalAuthor: String "Aiirsocial Pty Ltd"
+    let originalAuthor: String = "Aiirsocial Pty Ltd"
 }
