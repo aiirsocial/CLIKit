@@ -38,7 +38,7 @@ let input: String? = readString(repeatOnFailure: true)
 import CLIKit
 
 let input: String? = readString(repeatOnFailure: true, executeOnFailure: {
-  print("Invalid Input!".red())
+  print("Invalid Input!".color(.red))
 })
 ```
 
@@ -48,7 +48,7 @@ let input: String? = readString(repeatOnFailure: true, executeOnFailure: {
 import CLIKit
 
 let input: String? = readString {
-  writeString("Invalid Input!".red())
+  writeString("Invalid Input!".color(.red))
 }
 ```
 
@@ -57,7 +57,7 @@ let input: String? = readString {
 import CLIKit
 
 let input: String? = readString(repeatOnFailure: false) {
-  writeString("Invalid Input!".red())
+  writeString("Invalid Input!".color(.red))
 }
 ```
 
@@ -99,7 +99,7 @@ let input: Int? = readInt(repeatOnFailure: true)
 import CLIKit
 
 let input: Int? = readInt(repeatOnFailure: true, executeOnFailure: {
-  print("Invalid Input!".red())
+  print("Invalid Input!".color(.red))
 })
 ```
 
@@ -109,7 +109,7 @@ let input: Int? = readInt(repeatOnFailure: true, executeOnFailure: {
 import CLIKit
 
 let input: Int? = readInt {
-  writeString("Invalid Input!".red())
+  writeString("Invalid Input!".color(.red))
 }
 ```
 
@@ -118,7 +118,7 @@ let input: Int? = readInt {
 import CLIKit
 
 let input: Int? = readInt(repeatOnFailure: false) {
-  writeString("Invalid Input!".red())
+  writeString("Invalid Input!".color(.red))
 }
 ```
 
@@ -160,7 +160,7 @@ let input: Float? = readFloat(repeatOnFailure: true)
 import CLIKit
 
 let input: Float? = readFloat(repeatOnFailure: true, executeOnFailure: {
-    print("Invalid Input!".red())
+    print("Invalid Input!".color(.red))
 })
 ```
 
@@ -170,7 +170,7 @@ let input: Float? = readFloat(repeatOnFailure: true, executeOnFailure: {
 import CLIKit
 
 let input: Float? = readFloat {
-    writeString("Invalid Input!".red())
+    writeString("Invalid Input!".color(.red))
 }
 ```
 
@@ -179,7 +179,7 @@ let input: Float? = readFloat {
 import CLIKit
 
 let input: Float? = readFloat(repeatOnFailure: false) {
-    writeString("Invalid Input!".red())
+    writeString("Invalid Input!".color(.red))
 }
 ```
 
@@ -221,7 +221,7 @@ let input: Double? = readDouble(repeatOnFailure: true)
 import CLIKit
 
 let input: Double? = readDouble(repeatOnFailure: true, executeOnFailure: {
-    print("Invalid Input!".red())
+    print("Invalid Input!".color(.red))
 })
 ```
 
@@ -231,7 +231,7 @@ let input: Double? = readDouble(repeatOnFailure: true, executeOnFailure: {
 import CLIKit
 
 let input: Double? = readDouble {
-    writeString("Invalid Input!".red())
+    writeString("Invalid Input!".color(.red))
 }
 ```
 
@@ -240,7 +240,7 @@ let input: Double? = readDouble {
 import CLIKit
 
 let input: Double? = readDouble(repeatOnFailure: false) {
-    writeString("Invalid Input!".red())
+    writeString("Invalid Input!".color(.red))
 }
 ```
 
@@ -280,7 +280,7 @@ let input: Bool? = readBool(repeatOnFailure: true)
 import CLIKit
 
 let input: Bool? = readBool(repeatOnFailure: true, executeOnFailure: {
-    print("Invalid Input!".red())
+    print("Invalid Input!".color(.red))
 })
 ```
 
@@ -290,7 +290,7 @@ let input: Bool? = readBool(repeatOnFailure: true, executeOnFailure: {
 import CLIKit
 
 let input: Bool? = readBool {
-    writeString("Invalid Input!".red())
+    writeString("Invalid Input!".color(.red))
 }
 ```
 
@@ -299,6 +299,6 @@ let input: Bool? = readBool {
 import CLIKit
 
 let input: Bool? = readBool(repeatOnFailure: false) {
-    writeString("Invalid Input!".red())
+    writeString("Invalid Input!".color(.red))
 }
 ```
